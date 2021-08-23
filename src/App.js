@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/Profile';
+import myimg from './img/sailboat.svg'
+import PropTypes from 'prop-types'
 
 function App() {
+  const data={
+    FullName:'Harrabi oussema',
+    bio:'.....',
+    profession:'free-lance'
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Profile data={data}>
+      <img src={myimg} alt='img' />
+    </Profile>
     </div>
   );
 }
